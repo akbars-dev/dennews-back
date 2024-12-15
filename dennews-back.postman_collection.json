@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "9c1d00b2-3e0e-4b20-b7c0-90f2e4ff7965",
+		"name": "dennews-back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29282441"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Johon yangiliklari\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{SERVER}}/api/category/create"
+					},
+					"response": []
+				},
+				{
+					"name": "all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER}}/api/category/all"
+					},
+					"response": []
+				},
+				{
+					"name": "get category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER}}/api/category/675efd058d73fb99ffa1473f"
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Davlatning yangiliklari 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{SERVER}}/api/category/update/675efd058d73fb99ffa1473f"
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{SERVER}}/api/category/delete/675efd058d73fb99ffa1473f"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vauv nima bo'ldi ekan",
+									"type": "text"
+								},
+								{
+									"key": "subtitle",
+									"value": "yangilik",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "vauv nima bo'lganini topishga endi juda ham qiynalamiz yo'q",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "675efd758d73fb99ffa14748",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/akbarshox/Pictures/Akbar/waking-up.jpg"
+								}
+							]
+						},
+						"url": "{{SERVER}}/api/post/create"
+					},
+					"response": []
+				},
+				{
+					"name": "all posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER}}/api/post/all"
+					},
+					"response": []
+				},
+				{
+					"name": "last 20 posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER}}/api/post/last20"
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vauv nima bo'ldi ekan 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{SERVER}}/api/post/update/675efe4d8d73fb99ffa1474d"
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{SERVER}}/api/post/delete/675efe4d8d73fb99ffa1474d"
+					},
+					"response": []
+				},
+				{
+					"name": "get post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{SERVER}}/api/post/675eff638d73fb99ffa14756"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
