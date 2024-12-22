@@ -79,7 +79,12 @@ class PostController {
     }
 
     async getPosts(req, res) {
-        const posts = await postModel.find().populate('category', 'name')
+        const posts = await postModel
+            .find()
+            .populate('category', 'name')
+            .sort({ createdAt: -1 });
+
+            
         res.status(200).json({
             success: true,
             message: 'Posts fetched',
